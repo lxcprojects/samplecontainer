@@ -3,11 +3,11 @@ title,Title,
 creator,Creator,
 date,Date Created,
 description,Description,
-subject,Subjects,true
+subject,Keywords,true
 location,Location
 latitude,Latitude
 longitude,Longitude
-source,Source
+source,Documents,,true
 identifier,Source Identifier,,
 type,Type,
 format,Format,
