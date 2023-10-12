@@ -7,7 +7,7 @@ subject,Keywords,true
 location,Location
 latitude,Latitude
 longitude,Longitude
-source,Documents,true,true
+source,Documents,,true
 identifier,Source Identifier,,
 type,Type,
 format,Format,
