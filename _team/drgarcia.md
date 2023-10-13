@@ -1,0 +1,5 @@
+---
+name: Guadalupe García
+image: /assets/figures/headshots/drgarcia.jpg
+---
+Guadalupe García specializes in the history of cities and colonialism in Latin America and the Caribbean. Her research examines the intersections of colonialism, empire, and urban space and focuses on free, black, and enslaved peoples in Havana. Her work has appeared in the *Journal of Latin American Studies and Cultural Studies*. García's fellowships and awards include a Distinguished Fellowship at the CUNY Grad Center's Advanced Research Collaborative and research and digital fellowships at the John Carter Brown Library in Providence, Rhode Island. She has also held a Transatlantic Research Fellowship at the University of Warwick in the UK. Professor García is currently at work on a second book project that explores the use of digital humanities to interrogate how space, scale, and mapping can be used to counter the logic of the archive and expand our contemporary understanding of cities. Her work also explores Cuba and its history across time and space. Dr. García is on the faculty at Florida International University in August 2023.

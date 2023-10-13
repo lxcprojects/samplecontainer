@@ -1,0 +1,5 @@
+---
+name: Akosa Obianwu
+image:
+---
+is a 3rd year undergraduate student at The Johns Hopkins University double majoring in Public Health Studies & Spanish and also studying on a pre-dental track. As a double humanities major and lover of history, learning about the stories and journeys of people through time, and how their struggles and triumphs affected their ways of life. Akosa’s research and academic interests include European, American, and Black history, feminism, sexuality, gender, public policy, politics, and preventive health. Akosa works in higher education as a current intern at the Johns Hopkins University Center for Diversity & Inclusion as well as a student mentor to Black and first-year students at his university, where he works to highlight and cater to underrepresented communities on his campus, and leads conversations through educating students at Hopkins as well as in national conferences in cities like Atlanta and Las Vegas.
