@@ -75,3 +75,8 @@ exclude: [docs/, Rakefile, README.md, LICENSE, CITATION.cff, CODE_OF_CONDUCT.md,
 # compress CSS output
 sass:
   style: compressed
+
+# Standard Jekyll config to include "_team" page
+collections:
+  team:
+    output: false
