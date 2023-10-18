@@ -105,13 +105,18 @@
 
                     let valueElAsStr = `${value}`;
                     if (field.external_link) {
-                        valueElAsStr = value
-                            .split(';')
-                            .map((link) => ( `<a href=${link} target="_blank" rel="noopener">${link}</a>&nbsp;` ))
-                            .join('');
+                        valueElAsStr = 
+                            '<ul class="external-link-list">' +
+                            value
+                                .split(';')
+                                .map((link) => (
+                                    `<li><a href=${link} target="_blank" rel="noopener">${link}</a></li>`
+                                ))
+                                .join('') +
+                            '</ul>'
                     }
 
-                    fields += `<dt class="field">{{ f.display_name }}:</dt>&nbsp;<dd class="field-value">${valueElAsStr}</dd>`;
+                    fields += `<dt class="field">{{ f.display_name }}:</dt><dd class="field-value">${valueElAsStr}</dd>`;
                 }
             {% endif %}{% endfor %}
             fields += '</dl>';
