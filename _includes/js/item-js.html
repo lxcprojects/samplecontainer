@@ -99,7 +99,25 @@
                 fields += '<dt class="field">{{ f.display_name }}:</dt> <dd class="field-value">' + browseLinks + '</dd>';
             }
             {%- else -%}
-            if (item[{{ f.field | jsonify }}]) { fields += '<dt class="field">{{ f.display_name }}:</dt> <dd class="field-value">{% if f.external_link == "true" %}<a href="' + item[{{ f.field | jsonify }}] + '" target="_blank" rel="noopener">' + item[{{ f.field | jsonify }}] + '</a>{% else %}' + item[{{ f.field | jsonify }}] + '{% endif %}</dd>'; }
+                if (item[{{ f.field | jsonify }}]) {
+                    const field = {{ f | jsonify }};
+                    const value = item[field.field];
+
+                    let valueElAsStr = `${value}`;
+                    if (field.external_link) {
+                        valueElAsStr = 
+                            '<ul class="external-link-list">' +
+                            value
+                                .split(';')
+                                .map((link) => (
+                                    `<li><a href=${link} target="_blank" rel="noopener">${link}</a></li>`
+                                ))
+                                .join('') +
+                            '</ul>'
+                    }
+
+                    fields += `<dt class="field">{{ f.display_name }}:</dt><dd class="field-value">${valueElAsStr}</dd>`;
+                }
             {% endif %}{% endfor %}
             fields += '</dl>';
             return fields;
