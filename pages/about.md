@@ -14,8 +14,7 @@ credits: true
 
 ## About the Project
 
-!["Poultry Vendor, New Orleans, 1873-74", Slavery Images: A Visual Record of the African Slave Trade and Slave Life in the Early African Diaspora, accessed November 26, 2023, http://www.slaveryimages.org/s/slaveryimages/item/754
-](../objects/vendor.jpeg)  
+!["Poultry Vendor, New Orleans, 1873-74", Slavery Images: A Visual Record of the African Slave Trade and Slave Life in the Early African Diaspora, accessed November 26, 2023, http://www.slaveryimages.org/s/slaveryimages/item/754](../objects/vendor.jpeg)  
 
 <br>
 ### Project Overview
