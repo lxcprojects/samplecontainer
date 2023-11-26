@@ -8,13 +8,14 @@ credits: true
 # Look in _includes/feature for options to easily add features to the page
 ---
 
-{% include feature/jumbotron.html objectid="https://cdil.lib.uidaho.edu/images/palouse_sm.jpg" %}
+{% include feature/jumbotron.html objectid="feature.jpg" %}
 
-{% include feature/nav-menu.html sections="About the Collection;About the About Page" %}
+{% include feature/nav-menu.html sections="About the Project;About Keywords;About the Story Set" %}
 
-## About the Collection
+## About the Project
 
-!["Veüe et Perspective de la Nouvelle Orleans" (View & Perspective of New Orleans), 1726. Ink and watercolor by Jean-Pierre Lassus. Detail of left side of illustation. View shows the young city of New Orleans from across the Mississippi River at Algiers Point. In the foreground, slaves labor on the West Bank (then a Company of the Indies plantation) downing trees. To right of center, a man spears an alligator. Small boats are on the Mississippi, with larger sailing ships across the River at the town. Trees are shown cleared only a short distance beyond the town limits. The road to Bayou St. John seen towards top center of view. This is said to be the only known contemporary view of the city from the first French Colonial era, before Louisiana was transfered to Spain in 1763. From Wikimedia](../objects/hypolite.jpeg)  
+!["Poultry Vendor, New Orleans, 1873-74", Slavery Images: A Visual Record of the African Slave Trade and Slave Life in the Early African Diaspora, accessed November 26, 2023, http://www.slaveryimages.org/s/slaveryimages/item/754
+](../objects/vendor.jpeg)  
 
 <br>
 ### Project Overview
@@ -36,5 +37,7 @@ Keywords for Black Louisiana is a collective of researchers founded in 2020 with
 ### Our Partners
 
 We work with New Orleans-based community partners in professional fields ranging from public history, education, literature, art, and activism. [Meet our partners](/keywords/partners)
-<!-- IMPORTANT!!! DELETE this comment and the include below when you are finished editing this page for your collection. The include below introduces about page features. They will show up on your collection's about page until you delete it.  -->
-{% include cb/about_the_about.md %} 
+
+## About Keywords  
+
+## About the Story Set
