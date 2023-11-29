@@ -12,7 +12,17 @@
 /* add items */
 var items = [
     {% for i in items %}
-    { "title":{{ i.title | strip | jsonify }}, "format":{% if i.format %}{{ i.format | jsonify }}{% else %}""{% endif %}, {% for f in fields %}{% if i[f.field] %}{{ f.field | jsonify }}:{{ i[f.field] | strip | jsonify }},{% endif %}{% endfor %} {% if i.youtubeid %} "youtube": {{ i.youtubeid | jsonify }}, {% endif %}{% if  i.filename contains '/' %}"filename": "{{ i.filename }}" {% else %}"filename":"{{ '/objects/' | relative_url | append: i.filename }}"{% endif %}, "link": "{% if i.parentid %}{{ i.parentid }}#{{ i.objectid }}{% else %}{{ i.objectid }}{% endif %}", "id":{{ i.objectid | jsonify }} }{% unless forloop.last %},{% endunless %}{% endfor %}
+    {
+        "title":{{ i.title | strip | jsonify }},
+        "format":{% if i.format %}{{ i.format | jsonify }}{% else %}""{% endif %},
+        {% for f in fields %}{% if i[f.field] %}{{ f.field | jsonify }}:{{ i[f.field] | strip | jsonify }},{% endif %}{% endfor %}
+        {% if i.youtubeid %} "youtube": {{ i.youtubeid | jsonify }}, {% endif %}
+        {% if  i.filename contains '/' %}"filename": "{{ i.filename }}" {% else %}"filename":"{{ '/objects/' | relative_url | append: i.filename }}"{% endif %}, 
+        "link": "{% if i.parentid %}{{ i.parentid }}#{{ i.objectid }}{% else %}{{ i.objectid }}{% endif %}", 
+        "id":{{ i.objectid | jsonify }}
+    }
+        {% unless forloop.last %},{% endunless %}
+    {% endfor %}
 ];
 
 /* function to create cards for each item */ 
@@ -73,7 +83,8 @@ function makeCard(obj) {
     {% endunless %}{% endfor %}
     card += '</p>';
     // media type
-    if(obj.format != "") {
+    const formatField = {{ fields | jsonify}}.find(f => f.field == 'format') || {};
+    if(!formatField.hidden && obj.format != "") {
         card += '<p class="card-text"><small><a class="btn btn-sm btn-outline-secondary" href="{{ '/browse.html' | relative_url }}#' + encodeURIComponent(obj.format) + '">' + 
         obj.format.split("/").pop().replace("_", " ").toUpperCase() + ' <svg class="bi icon-sprite"><use xlink:href="{{ "/assets/lib/cb-icons.svg" | relative_url }}#';
         if(obj.format.includes('image')){
