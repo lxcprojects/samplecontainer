@@ -73,7 +73,8 @@ function makeCard(obj) {
     {% endunless %}{% endfor %}
     card += '</p>';
     // media type
-    if(obj.format != "") {
+    const formatField = {{ fields | jsonify}}.find(f => f.field == 'format') || {};
+    if(!formatField.hidden && obj.format != "") {
         card += '<p class="card-text"><small><a class="btn btn-sm btn-outline-secondary" href="{{ '/browse.html' | relative_url }}#' + encodeURIComponent(obj.format) + '">' + 
         obj.format.split("/").pop().replace("_", " ").toUpperCase() + ' <svg class="bi icon-sprite"><use xlink:href="{{ "/assets/lib/cb-icons.svg" | relative_url }}#';
         if(obj.format.includes('image')){
